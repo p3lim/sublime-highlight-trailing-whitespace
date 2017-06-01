@@ -1,0 +1,8 @@
+This plugin will highlight any trailing whitespace.
+
+You can enable this through the preferences (or syntax-specific) like so:
+
+{
+	"highlight_trailing_whitespace": true,
+}
+
