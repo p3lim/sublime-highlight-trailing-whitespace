@@ -22,5 +22,5 @@ You can enable this through the preferences (or syntax-specific) like so:
 
 1. Click the `Preferences > Browse Packages` menu.
 2. Open up a terminal and execute the following:
- - `git clone https://github.com/p3lim/sublime-highlight-trailing-whitespace Highlight\ Trailing\ Whitespace`
+    - `git clone https://github.com/p3lim/sublime-highlight-trailing-whitespace Highlight\ Trailing\ Whitespace`
 3. Restart Sublime Text.
