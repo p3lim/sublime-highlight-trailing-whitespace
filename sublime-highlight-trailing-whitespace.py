@@ -2,6 +2,10 @@ import sublime
 import sublime_plugin
 
 def highlight_whitespace(view):
+	if(view.size() > 1e6):
+		# avoid crashing on large files
+		return
+
 	if(view.settings().get('highlight_trailing_whitespace', False)):
 		view.add_regions('HighlightTrailingWhitespace', view.find_all('[\t ]+$'),
 			'invalid', '', sublime.DRAW_EMPTY | sublime.DRAW_NO_FILL | sublime.HIDE_ON_MINIMAP)
