@@ -2,13 +2,22 @@ import sublime
 import sublime_plugin
 
 def highlight_whitespace(view):
-	if(view.size() > 1e6):
+	if(view.size() > 1e5):
 		# avoid crashing on large files
 		return
 
 	if(view.settings().get('highlight_trailing_whitespace', False)):
-		view.add_regions('HighlightTrailingWhitespace', view.find_all('[\t ]+$'),
-			'invalid', '', sublime.DRAW_EMPTY | sublime.DRAW_NO_FILL | sublime.HIDE_ON_MINIMAP)
+		regions = view.find_all('[\t ]+$')
+		if regions:
+			if view.settings().get('highlight_trailing_whitespace_non_cursor', False):
+				selection = view.sel()[0]
+				for region in regions:
+					if region.contains(selection):
+						regions.remove(region)
+						break
+
+			view.add_regions('HighlightTrailingWhitespace', regions,
+				'invalid', '', sublime.DRAW_EMPTY | sublime.DRAW_NO_FILL | sublime.HIDE_ON_MINIMAP)
 	else:
 		view.erase_regions('HighlightTrailingWhitespace')
 
@@ -20,6 +29,9 @@ class HighlightTrailingWhitespace(sublime_plugin.EventListener):
 		highlight_whitespace(view)
 
 	def on_load_async(self, view):
+		highlight_whitespace(view)
+
+	def on_selection_modified_async(self, view):
 		highlight_whitespace(view)
 
 def plugin_loaded():

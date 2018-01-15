@@ -6,6 +6,7 @@ You can enable this through the preferences (or syntax-specific) like so:
 ```json
 {
 	"highlight_trailing_whitespace": true,
+	"highlight_trailing_whitespace_non_cursor": false
 }
 ```
 
