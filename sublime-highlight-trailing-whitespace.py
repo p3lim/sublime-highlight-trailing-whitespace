@@ -18,8 +18,8 @@ def highlight_whitespace(view):
 
 			view.add_regions('HighlightTrailingWhitespace', regions,
 				'invalid', '', sublime.DRAW_EMPTY | sublime.DRAW_NO_FILL | sublime.HIDE_ON_MINIMAP)
-	else:
-		view.erase_regions('HighlightTrailingWhitespace')
+		else:
+			view.erase_regions('HighlightTrailingWhitespace')
 
 class HighlightTrailingWhitespace(sublime_plugin.EventListener):
 	def on_modified_async(self, view):
