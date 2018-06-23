@@ -2,14 +2,19 @@ import sublime
 import sublime_plugin
 
 def highlight_whitespace(view):
-	if(view.size() > 1e5):
+	if view.size() > 1e5:
 		# avoid crashing on large files
 		return
 
-	if(view.settings().get('highlight_trailing_whitespace', False)):
+	settings = view.settings()
+	if settings.get('is_widget', False):
+		# don't render in widget views
+		return
+
+	if settings.get('highlight_trailing_whitespace', False):
 		regions = view.find_all('[\t ]+$')
 		if regions:
-			if view.settings().get('highlight_trailing_whitespace_non_cursor', False):
+			if settings.get('highlight_trailing_whitespace_non_cursor', False):
 				selection = view.sel()[0]
 				for region in regions:
 					if region.contains(selection):
