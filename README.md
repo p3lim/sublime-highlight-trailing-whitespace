@@ -6,9 +6,20 @@ You can enable this through the preferences (or syntax-specific) like so:
 ```json
 {
 	"highlight_trailing_whitespace": true,
-	"highlight_trailing_whitespace_non_cursor": false
+	"highlight_trailing_whitespace_non_cursor": false,
+	"highlight_trailing_whitespace_color": "#FF0000",
+	"highlight_trailing_whitespace_fill": false
 }
 ```
+
+Supported color formats (from [official docs](https://www.sublimetext.com/docs/3/color_schemes.html#colors)):
+- Hex RGB (`#RRGGBB`)
+- Hex RGBA (`#RRGGBBAA`)
+- RGB (`rgb(255, 0, 0)`)
+- RGBA (`rgba(255, 255, 255, 0.5)`)
+- HSL (`hsl(0, 100%, 100%)`)
+- HSLA (`hsl(0, 100%, 100%, 0.5)`)
+- Named [CSS color names](https://www.sublimetext.com/docs/3/color_schemes.html#css_colors) (`cyan`)
 
 ## Installation
 
