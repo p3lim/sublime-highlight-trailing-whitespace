@@ -19,7 +19,7 @@ Supported color formats (from [official docs](https://www.sublimetext.com/docs/3
 - RGBA (`rgba(255, 255, 255, 0.5)`)
 - HSL (`hsl(0, 100%, 100%)`)
 - HSLA (`hsl(0, 100%, 100%, 0.5)`)
-- Named [CSS color names](https://www.sublimetext.com/docs/3/color_schemes.html#css_colors) (`cyan`)
+- [CSS color names](https://www.sublimetext.com/docs/3/color_schemes.html#css_colors) (`cyan`)
 
 ## Installation
 
