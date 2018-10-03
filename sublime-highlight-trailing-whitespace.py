@@ -29,7 +29,8 @@ def highlight_whitespace(view):
 						break
 
 			view.add_regions(NAMESPACE, regions, NAMESPACE, '',
-				sublime.DRAW_EMPTY | sublime.HIDE_ON_MINIMAP | sublime.DRAW_NO_FILL)
+				sublime.DRAW_EMPTY | sublime.HIDE_ON_MINIMAP |
+				0 if settings.get('highlight_trailing_whitespace_fill', False) else sublime.DRAW_NO_FILL)
 		else:
 			view.erase_regions(NAMESPACE)
 
