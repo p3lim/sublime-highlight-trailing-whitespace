@@ -5,9 +5,13 @@ This plugin will highlight any trailing whitespace.
 It's disabled by default, enable it through the preferences (or syntax-specific):
 ```json
 {
+	// enable the plugin
 	"highlight_trailing_whitespace": true,
+	// don't show on the cursor's current line
 	"highlight_trailing_whitespace_non_cursor": false,
+	// override the default color
 	"highlight_trailing_whitespace_color": "#FF0000",
+	// fill the whitespace instead of outlining it
 	"highlight_trailing_whitespace_fill": false
 }
 ```
