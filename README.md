@@ -2,7 +2,7 @@
 
 This plugin will highlight any trailing whitespace.
 
-You can enable this through the preferences (or syntax-specific) like so:
+It's disabled by default, enable it through the preferences (or syntax-specific):
 ```json
 {
 	"highlight_trailing_whitespace": true,
