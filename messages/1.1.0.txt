@@ -1,0 +1,6 @@
+1.1.0:
+
+  - Added color customization options
+  - Added option to fill instead of outline
+
+https://packagecontrol.io/packages/Highlight%20Trailing%20Whitespace
