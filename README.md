@@ -17,6 +17,7 @@ It's disabled by default, enable it through the preferences (or syntax-specific)
 ```
 
 Supported color formats (from [official docs](https://www.sublimetext.com/docs/3/color_schemes.html#colors)):
+
 - Hex RGB (`#RRGGBB`)
 - Hex RGBA (`#RRGGBBAA`)
 - RGB (`rgb(255, 0, 0)`)
