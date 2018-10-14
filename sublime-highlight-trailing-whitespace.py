@@ -85,6 +85,7 @@ class HighlightTrailingWhitespace(sublime_plugin.EventListener):
 		highlight_whitespace(view)
 
 def plugin_loaded():
+	last_view = False
 	for window in sublime.windows():
 		for view in window.views():
 			view.settings().add_on_change(NAMESPACE, lambda: highlight_whitespace(view))
