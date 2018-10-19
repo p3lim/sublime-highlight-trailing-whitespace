@@ -104,7 +104,7 @@ def update_color_scheme():
 	name = path.split('/')[-1].split('.')[0]
 
 	# create directory we'll save our own color schemes
-	scheme_path = os.path.join(sublime.packages_path(), 'User', NAMESPACE + '.cache')
+	scheme_path = os.path.join(sublime.packages_path(), 'User', NAMESPACE)
 	if not os.path.exists(scheme_path):
 		os.makedirs(scheme_path)
 
