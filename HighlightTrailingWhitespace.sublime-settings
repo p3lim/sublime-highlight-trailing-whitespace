@@ -1,0 +1,30 @@
+{
+	/*
+		Change this to `false` to disable highlighting.
+	*/
+	"enabled": true,
+
+	/*
+		Change this to `false` to also highlight whitespace where the cursor is.
+	*/
+	"never_on_cursor": true,
+
+	/*
+		Change this to `true` to fill the highlight instead of only outlining it.
+	*/
+	"fill": false,
+
+	/*
+		Set the highlight color.
+		Supported color formats:
+		- Hex RGB  (`#RRGGBB`)
+		- Hex RGBA (`#RRGGBBAA`)
+		- RGB      (`rgb(255, 0, 0)`)
+		- RGBA     (`rgba(255, 255, 255, 0.5)`)
+		- HSL      (`hsl(0, 100%, 100%)`)
+		- HSLA     (`hsl(0, 100%, 100%, 0.5)`)
+		- Named    (`cyan`)
+		    - <https://www.sublimetext.com/docs/3/color_schemes.html#css_colors>
+	*/
+	"color": "#FF0000"
+}
