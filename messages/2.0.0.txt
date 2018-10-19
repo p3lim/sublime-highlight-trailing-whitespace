@@ -1,0 +1,9 @@
+Highlight Trailing Whitespace 2.0.0 changes:
+
+  - Changed to use a package-specific settings file
+    - You'll need to migrate your old settings to the new format to apply them, sorry about this
+  - Added refreshing of all views when any setting is changed
+  - Added default settings with in-line documentation of each setting
+  - Added shorthands for the settings (try looking for it with the command palette!)
+
+https://packagecontrol.io/packages/Highlight%20Trailing%20Whitespace
